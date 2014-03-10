@@ -1,7 +1,7 @@
 import unittest
 from class_exam.exam_functions import read_list
 from class_exam.exam_functions import list_from_file
-from class_exam.exam_functions import reaarange_list
+from class_exam.exam_functions import rearrange_list
 import mock
 from mock import call
 
@@ -52,10 +52,10 @@ class TestReadList(unittest.TestCase):
         self.assertEqual(print_mock.call_count, 2)
 
 
-class TestReaarangeList(unittest.TestCase):
+class TestRearrangeList(unittest.TestCase):
 
-    def test_rearange_list(self):
+    def test_rearrange_list(self):
         user_list = ['user_1', 'user_2', 'user_3', 'user_4']
         new_list = ['user_3', 'user_1', 'user_2', 'user_4']
-        output = reaarange_list('user_3', user_list)
+        output = rearrange_list('user_3', user_list)
         self.assertEqual(output, new_list)

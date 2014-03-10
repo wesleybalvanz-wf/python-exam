@@ -21,7 +21,7 @@ def read_list(users):
         return user_name, False
 
 
-def reaarange_list(u_name, u_list):
+def rearrange_list(u_name, u_list):
     i = u_list.index(u_name)
     u_list.insert(0, u_list.pop(i))
     return u_list
