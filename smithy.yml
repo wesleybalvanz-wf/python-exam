@@ -1,0 +1,7 @@
+project: python
+
+requirements:
+  - requirements.txt
+
+script:
+  - nosetests tests
