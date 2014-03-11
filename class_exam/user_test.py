@@ -2,6 +2,8 @@ import exam_functions
 
 u_list = exam_functions.list_from_file("names.txt")
 u_name = exam_functions.read_list(u_list)
+modified_list = exam_functions.modify_list(u_list)
+
 print "__________________"
 
 print "Congratualtions on making it this far!"
