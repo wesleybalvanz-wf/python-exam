@@ -2,6 +2,7 @@ import unittest
 from class_exam.exam_functions import read_list
 from class_exam.exam_functions import list_from_file
 from class_exam.exam_functions import rearrange_list
+from class_exam.exam_functions import get_users
 import mock
 from mock import call
 
@@ -59,3 +60,13 @@ class TestRearrangeList(unittest.TestCase):
         new_list = ['user_3', 'user_1', 'user_2', 'user_4']
         output = rearrange_list('user_3', user_list)
         self.assertEqual(output, new_list)
+
+
+class TestGetUsers(unittest.TestCase):
+
+    def test_get_users(self):
+        user_list = ['user_1', 'user_2', 'user_3', 'user_4']
+        opponent_list = ['user_2', 'user_3', 'user_4']
+        opponents, user = get_users(user_list)
+        self.assertEqual(user, 'user_1')
+        self.assertEqual(opponents, opponent_list)

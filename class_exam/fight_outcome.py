@@ -34,13 +34,6 @@ class Outcome(UserStats, object):
                    % (self.opponent_name, self.opponent_stats, self.user_stats)
 
 
-def get_users(users_list):
-    user = users_list[0]
-    opponents = users_list.remove(user)
-
-    return opponents, user
-
-
 def fight(opponents, user):
     for opponent in opponents:
         print Outcome.fight_outcome(opponent, user)

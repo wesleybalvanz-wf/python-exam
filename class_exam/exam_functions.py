@@ -47,3 +47,11 @@ def modify_list(u_list):
     else:
         return "Invalid command, please type 'add' or 'remove'"
     return u_list
+
+
+def get_users(u_list):
+    user = str(u_list[0])
+    u_list.pop(0)
+    opponents = u_list
+
+    return opponents, user
