@@ -42,7 +42,7 @@ class ShoppingList():
             i = self.items.index(purchased_item)
             self.items[i] += " -Purchased"
             self.show_list()
-            return self.items
+            return "Purchased % s." % purchased_item
         elif purchased_item + " -Purchased" in self.items:
             return "You already bought %s." % purchased_item
         else:
