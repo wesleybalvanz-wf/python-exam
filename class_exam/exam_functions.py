@@ -1,5 +1,3 @@
-
-
 def list_from_file(file_name):
     user_list = []
     try:
@@ -47,3 +45,4 @@ def modify_list(u_list):
     else:
         return "Invalid command, please type 'add' or 'remove'"
     return u_list
+
