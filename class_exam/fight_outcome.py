@@ -19,9 +19,11 @@ class UserStats(object):
 class Outcome(UserStats, object):
 
     def __init__(self, user, opponent):
-        self.user_name, self.user_stats = UserStats(user).get_name_and_stats()
-        self.opponent_name, self.opponent_stats = UserStats(
-            opponent).get_name_and_stats()
+        self.user_name, self.user_stats = \
+            UserStats(user).get_name_and_stats()
+
+        self.opponent_name, self.opponent_stats = \
+            UserStats(opponent).get_name_and_stats()
 
     def fight_outcome(self):
             if self.user_stats > self.opponent_stats:
@@ -29,11 +31,13 @@ class Outcome(UserStats, object):
                        % (self.opponent_name,
                           self.opponent_stats,
                           self.user_stats)
+
             elif self.user_stats == self.opponent_stats:
                 return "%s stats are %d and your stats are %d, it's a tie." \
                        % (self.opponent_name,
                           self.opponent_stats,
                           self.user_stats)
+
             elif self.user_stats < self.opponent_stats:
                 return "%s stats are %d and your stats are %d, you lose." \
                        % (self.opponent_name,
