@@ -49,9 +49,9 @@ def modify_list(u_list):
     return u_list
 
 
-def get_users(u_list):
-    user = str(u_list[0])
-    u_list.pop(0)
+def get_users(u_name, u_list):
+    user_index = u_list.index(u_name)
+    u_list.pop(user_index)
     opponents = u_list
 
-    return opponents, user
+    return opponents, u_name

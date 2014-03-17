@@ -65,8 +65,9 @@ class TestRearrangeList(unittest.TestCase):
 class TestGetUsers(unittest.TestCase):
 
     def test_get_users(self):
+        user_name = 'user_1'
         user_list = ['user_1', 'user_2', 'user_3', 'user_4']
         opponent_list = ['user_2', 'user_3', 'user_4']
-        opponents, user = get_users(user_list)
+        opponents, user = get_users(user_name, user_list)
         self.assertEqual(user, 'user_1')
         self.assertEqual(opponents, opponent_list)
