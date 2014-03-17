@@ -1,5 +1,3 @@
-
-
 def list_from_file(file_name):
     user_list = []
     try:
